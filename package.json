@@ -1,0 +1,17 @@
+{
+  "name": "mongo-ap",
+  "version": "1.0.0",
+  "description": "Mongo App - UTN 2023",
+  "main": "./server/index.js",
+  "type": "module",
+  "scripts": {
+    "server": "node ./server/index.js",
+    "client": "node ./client/client.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.3.1"
+  }
+}
