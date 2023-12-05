@@ -3,6 +3,7 @@ import dotenv from "dotenv";
 import { readHistory, writeHistory } from "../utils/handleHistory.js";
 import { randomUUID } from "node:crypto";
 import { createConnectionMongo } from "../database/mongodb.js";
+import { processParams } from "../utils/handleParams.js";
 dotenv.config();
 
 const port = process.env.PORT ?? 2323;
@@ -15,7 +16,7 @@ serverTCP.on("connection", (socket) => {
 
     socket.on("data", (bufferData) => {
         const data = JSON.parse(bufferData.toString());
-        console.log(data);
+        const response = processParams(data);
     });
 
     socket.on("close", () => {
