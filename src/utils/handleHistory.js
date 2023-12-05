@@ -1,7 +1,7 @@
 import fs, { read } from "node:fs";
 import { randomUUID } from "node:crypto";
 
-const PATH = "./log/historyUser.json";
+const PATH = "./src/log/historyUser.json";
 
 const readHistory = () => {
     return JSON.parse(fs.readFileSync(PATH).toString());

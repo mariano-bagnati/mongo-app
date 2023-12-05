@@ -5,8 +5,8 @@
   "main": "./server/index.js",
   "type": "module",
   "scripts": {
-    "server": "node --watch ./server/index.js",
-    "client": "node ./client/client.js"
+    "server": "node --watch ./src/server/index.js",
+    "client": "node ./src/client/client.js"
   },
   "keywords": [],
   "author": "",
